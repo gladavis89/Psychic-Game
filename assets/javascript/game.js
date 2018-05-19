@@ -1,7 +1,7 @@
 var text = "";
 var possible = "abcdefghijklmnopqrstuvwxyz";
 var gsf = [];
-var gl = 8;
+var gl = 9;
 var wins = 0;
 var losses = 0;
 var input = "";
@@ -9,7 +9,7 @@ var input = "";
 document.onkeydown = function(event) {
   var input = event.key;
 
-  for (var i = 0; i < 1; i++) {
+ 
     var text = possible.charAt(Math.floor(Math.random() * possible.length));
 
     gsf.push(" " + input);
@@ -17,7 +17,7 @@ document.onkeydown = function(event) {
     document.getElementById("gsf").innerHTML = gsf;
     document.getElementById("losses").innerHTML = losses;
     document.getElementById("wins").innerHTML = wins;
-  }
+
   if (text == input) {
     wins = wins + 1;
     gl = 9;
