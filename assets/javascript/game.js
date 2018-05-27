@@ -5,11 +5,13 @@ var gl = 9;
 var wins = 0;
 var losses = 0;
 var input = "";
-
+var text = possible.charAt(Math.floor(Math.random() * possible.length));
+  console.log(text)
 document.onkeydown = function(event) {
   var input = event.key;
 
-  var text = possible.charAt(Math.floor(Math.random() * possible.length));
+  
+
 
   gsf.push(" " + input);
   document.getElementById("gl").innerHTML = gl--;
@@ -23,6 +25,8 @@ document.onkeydown = function(event) {
     document.getElementById("losses").innerHTML = losses;
     document.getElementById("gl").textContent = 9;
     document.getElementById("gsf").innerHTML = gsf;
+    text = possible.charAt(Math.floor(Math.random() * possible.length));
+    console.log(text)
   }
   
   if (text == input) {
@@ -33,5 +37,7 @@ document.onkeydown = function(event) {
     document.getElementById("wins").innerHTML = wins;
     document.getElementById("gl").textContent = 9;
     document.getElementById("gsf").innerHTML = gsf;
+    text = possible.charAt(Math.floor(Math.random() * possible.length));
+    console.log(text)
   }
 };
